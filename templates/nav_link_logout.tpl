@@ -1,0 +1,1 @@
+<li><a href="/logout/">Выход</a></li>
