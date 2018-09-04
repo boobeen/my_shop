@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+* {
+	margin: 0;
+	padding: 0;
+	/*outline: 1px solid #aaa; */
+}
+
+body {
+	background-image: url(/img/body.png);
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	min-height: calc(100vh - 62px); /* прижать footer к низу */
+}
+
+/*=======================================
+			Header
+=======================================*/
+
+header, .logo, .social {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+header {
+	height: 100px;
+	padding: 7px 0;
+	justify-content: space-around;
+}
+
+header ul {
+	list-style-type: none;
+}
+
+.logo {
+	width: 330px;
+}
+
+.logo img {
+	height: 90px;
+	width: auto;
+	border: 2px solid #c0c0c0;
+	border-radius: 25px;
+	padding: 3px;
+}
+
+#logo {
+	font: 900 58px serif;
+	font-family: 'Indie Flower', cursive;
+	color: #303030;
+	line-height: 0.8;
+	padding: 7px 0 0 5px;
+}
+
+.social {   
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	align-items: center;
+}
+
+.social img {
+	margin: 1px;
+}
+
+/*=======================================
+			Menu
+=======================================*/
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	background-color: #ccc;
+}
+
+.menu-in {
+	list-style: none;
+	display: none;
+	position: absolute;
+	background-color: #ccc;
+}
+
+.menu li {
+	display: block;
+	width: 20%;
+	text-align: center;
+	position: relative;
+}
+
+.menu-in li {
+	width: 100%;
+}
+
+.menu > li:not(:first-child) {
+	border-left: 3px solid #c0c0c0;
+}
+
+.menu li:hover ul {
+	display: block;
+	width: 100%;
+}
+
+.menu-in {
+	outline: 3px solid #c0c0c0;
+}
+
+.menu a {
+	display: block;
+	font: bold 14pt serif;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.menu-in a {
+	padding: 3px;
+}
+
+nav a, nav a:active, nav a:visited {
+	color: #54769b;
+}
+
+nav a:hover {
+	color: #dcdbdb;
+	background-color: #bdbdbd;
+}
+
+/*=======================================
+			Content
+=======================================*/
+
+/*=============/ Main /================*/
+
+/*=============/ Catalog /================*/
+
+.l-block {
+	min-width: 200px;
+	padding: 5px 10px;
+	border-right: 3px inset #c0c0c0;
+	font: 400 20px/24px serif;
+}
+
+.r-block {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+}
+
+.all-brand {
+	display: flex;
+	width: 100%;
+}
+
+.content {
+	display: flex;
+	margin-top: 10px;
+}
+
+.brand {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	border: 3px inset #c0c0c0;
+	margin: 15px 10px;
+	width: 125px;
+	height: 30px;
+}
+
+.brand a {
+	margin: auto;
+	width: 100%;
+}
+
+.brandname {
+	color: #404040;
+	font: 600 22px serif;
+	text-align: center;
+  text-transform: uppercase;
+}
+
+.brand img {
+}
+
+.thumb {
+	background-color: #fff;
+	border: 3px inset #c0c0c0;
+	margin: 25px 10px;
+	width: 200px;
+}
+
+.thumb img {
+	padding: 10px 0;
+}
+
+.content img {
+	width: 100%;
+}
+
+h3 {
+	width: 100%;
+	margin: 15px auto;
+	font: 600 36px/48px serif;
+	color: #404040;
+	text-align: center;
+	border-bottom: 5px dotted #c0c0c0;
+}
+
+.grad {
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(to right, #6c6c6c, #c0c0c0);
+}
+
+.name {
+	color: #54769b;
+	font: 500 20px/24px serif;
+	padding: 3px;
+	background-color: #ccc;
+}
+
+.price {
+	color: red;
+	font: 600 24px/32px serif;
+	padding: 3px;
+	text-align: right;
+	background-color: #ccc;
+}
+
+/*==========/ Страница Товара /========*/
+
+.content-product {
+	display: block;
+	margin: 10px;
+}
+
+h2 {
+	font: 500 18pt serif;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.brief {
+	color: #707070;
+	font: italic 14px/16px serif;
+}
+
+.full {
+	color: #484343;
+	font: 400 16px/24px serif;
+	text-align: justify;
+}
+
+.spec {
+	min-height: 150px;
+	list-style-image: url(/img/mark.png);
+	font: italic 555 16px serif;
+	text-align: left;
+}
+
+.spec img {
+	border: 3px inset #c0c0c0;
+	width: 200px;
+	height: auto;
+	float: left;
+	margin-right: 50px;
+	padding: 5px;
+}
+
+.left {
+	font: 600 32px/48px serif;
+	text-align: left;
+	background-color: inherit;
+}
+
+#buy {
+  border: none;
+  cursor: pointer;
+}
+
+#buy img {
+	width: 100px;   /*Доработать*/
+}
+
+.clr {
+	clear: both;
+}
+
+/*=======================================
+			Contacts
+=======================================*/
+
+.send_me, .adress, .feedbacks {
+	max-width: 420px;
+	display: inline-block;
+	margin: 0 30px;
+	text-align: center;
+}
+
+.feedbacks {
+	min-width: 420px;
+  margin-top: 50px;
+}
+
+.feed {
+	margin-top: 15px;
+}
+
+.send_me h3, .adress h3 {
+	font-size: 24px;
+}
+
+input {
+	margin-bottom: 8px;
+	font: 300 13px sans-serif;
+}
+
+input[type="text"] {
+	width: 416px;
+	color: #5a5a5a;
+}
+
+textarea {
+	color: #463737;
+	font: 400 15px serif;
+}
+
+input [type="email"]:focus {
+	color: #0f0;
+	background-color: #f00;
+}
+
+iframe {
+	 width: 420px;
+	 height: 300px;
+}
+
+/*=======================================
+			Footer
+=======================================*/
+
+footer {
+	display: table;
+	background-color: #c0c0c0;
+	border-top: 2px solid #303030;
+	height: 50px;
+	width: 100%;
+	margin-top: 10px;
+	text-align: center;
+	
+}
+
+footer p {
+	display: table-cell;
+	font: 300 14px serif;   
+	vertical-align: middle;
+}
+
+footer a {
+	color: #54769b;
+}
+
+/*====================================
+===============/ THE END /============
+====================================*/
+
+/*авторизация*/
+
+.login-page {
+  width: 350px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font: bold 14pt serif;
+  color: #54769b;
+  text-transform: uppercase;
+  outline: 0;
+  background: #ccc;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #bdbdbd;
+  color: #dcdbdb;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #ccc;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.auth {
+  position: relative;
+  z-index: 1;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.auth:before, .auth:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.auth .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.auth .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.auth .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.auth .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.auth .info span .fa {
+  color: #EF3B3A;
+}
+
+
+
+
+table{
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+table td{
+	border: 1px solid #555;
+	padding: 10px;
+}
+table .first td:nth-child(n+1){
+	height: 50px;
+	color: red;
+}
+
+#order {
+  width: 80%;
+  margin: 0 auto;
+}
